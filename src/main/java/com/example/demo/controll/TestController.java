@@ -20,6 +20,7 @@ public class TestController {
         Map<String, Object> map = new HashMap<>(16);
         map.put("name", "姓名");
         map.put("sex", "女");
+        map.put("age", 20);
         return Result.ok(map);
     }
 
