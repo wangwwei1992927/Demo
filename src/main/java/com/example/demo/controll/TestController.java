@@ -1,0 +1,26 @@
+package com.example.demo.controll;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.HashMap;
+import java.util.Map;
+
+/**
+ * description: 描述
+ * @author WangWei
+ * @date 2019/9/23 15:49 
+ */
+@RestController
+@RequestMapping("/test")
+public class TestController {
+
+    @RequestMapping("/getInfo")
+    public Result firstTest(){
+        Map<String, Object> map = new HashMap<>(16);
+        map.put("name", "姓名");
+        map.put("sex", "女");
+        return Result.ok(map);
+    }
+
+}
