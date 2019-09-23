@@ -21,6 +21,7 @@ public class TestController {
         map.put("name", "姓名");
         map.put("sex", "女");
         map.put("age", 20);
+        map.put("flag", "最新");
         return Result.ok(map);
     }
 
