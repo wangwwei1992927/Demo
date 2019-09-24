@@ -22,6 +22,7 @@ public class TestController {
         map.put("sex", "女");
         map.put("age", 20);
         map.put("flag", "最新");
+        map.put("flag1", "最新1");
         return Result.ok(map);
     }
 
