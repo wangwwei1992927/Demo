@@ -23,6 +23,7 @@ public class TestController {
         map.put("age", 20);
         map.put("flag", "最新");
         map.put("flag1", "最新1");
+        map.put("flag2", "最新2");
         return Result.ok(map);
     }
 
