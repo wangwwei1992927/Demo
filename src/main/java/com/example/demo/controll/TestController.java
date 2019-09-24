@@ -25,6 +25,7 @@ public class TestController {
         map.put("flag1", "最新1");
         map.put("flag2", "最新2");
         map.put("flag3", "最新3");
+        map.put("flag4", "最新4");
         return Result.ok(map);
     }
 
