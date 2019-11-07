@@ -1,28 +1,28 @@
 
 # 用户类
 ## 获取学生信息
-**URL:** `localhost:8080/user/getStuInfo`
+**请求地址:** `localhost:8080/user/getStuInfo`
 
-**Type:** `GET`
+**请求方式:** `GET`
 
-**Content-Type:** `application/x-www-form-urlencoded`
+**内容格式:** `application/x-www-form-urlencoded`
 
-**Description:** 获取学生信息
+**描述:** 获取学生信息
 
 
-**Request-parameters:**
+**请求参数:**
 
-Parameter|Type|Description|Required|Since
+参数名|类型|说明|是否必填|版本号
 ---|---|---|---|---
 name|string|姓名|true|-
 
-**Request-example:**
+**请求例子:**
 ```
-localhost:8080/user/getStuInfo?name=梓晨.阎
+localhost:8080/user/getStuInfo?name=锦程.曾
 ```
-**Response-fields:**
+**响应数据:**
 
-Field | Type|Description|Since
+字段名 | 类型|说明|版本号
 ---|---|---|---
 id|int64|id|-
 name|string|姓名|-
@@ -32,58 +32,58 @@ userVoList|array|用户列表|-
 └─id|int64|id|-
 └─name|string|姓名|-
 
-**Response-example:**
+**响应例子:**
 ```
 {
-	"id":977,
-	"name":"梓晨.阎",
-	"sex":1,
-	"hobby":"pz7ous",
+	"id":86,
+	"name":"锦程.曾",
+	"sex":0,
+	"hobby":"amg5zw",
 	"userVoList":[
 		{
-			"id":266,
-			"name":"梓晨.阎"
+			"id":60,
+			"name":"锦程.曾"
 		}
 	]
 }
 ```
 
 ## 接口描述: 根据id获取用户信息
-**URL:** `localhost:8080/user/getInfo`
+**请求地址:** `localhost:8080/user/getInfo`
 
-**Type:** `POST`
+**请求方式:** `POST`
 
-**Content-Type:** `application/json; charset=utf-8`
+**内容格式:** `application/json; charset=utf-8`
 
-**Description:** 接口描述: 根据id获取用户信息
+**描述:** 接口描述: 根据id获取用户信息
 
 
-**Request-parameters:**
+**请求参数:**
 
-Parameter|Type|Description|Required|Since
+参数名|类型|说明|是否必填|版本号
 ---|---|---|---|---
 id|int64|id|true|-
 name|string|姓名|false|-
 
-**Request-example:**
+**请求例子:**
 ```
 {
-	"id":433,
-	"name":"梓晨.阎"
+	"id":364,
+	"name":"锦程.曾"
 }
 ```
-**Response-fields:**
+**响应数据:**
 
-Field | Type|Description|Since
+字段名 | 类型|说明|版本号
 ---|---|---|---
 id|int64|id|-
 name|string|姓名|-
 
-**Response-example:**
+**响应例子:**
 ```
 {
-	"id":296,
-	"name":"梓晨.阎"
+	"id":139,
+	"name":"锦程.曾"
 }
 ```
 

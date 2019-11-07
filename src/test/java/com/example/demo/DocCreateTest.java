@@ -4,11 +4,9 @@ import com.power.common.util.DateTimeUtil;
 import com.power.doc.builder.ApiDocBuilder;
 import com.power.doc.builder.HtmlApiDocBuilder;
 import com.power.doc.constants.DocGlobalConstants;
-import com.power.doc.model.ApiConfig;
-import com.power.doc.model.ApiReqHeader;
-import com.power.doc.model.RevisionLog;
-import com.power.doc.model.SourceCodePath;
+import com.power.doc.model.*;
 import org.junit.Test;
+
 
 /**
  * @description: 文档生成测试
@@ -42,9 +40,14 @@ public class DocCreateTest extends TopTest {
         config.setRevisionLogs(
                 RevisionLog.getLog().setRevisionTime("2018/12/15").setAuthor("chen").setRemarks("测试").setStatus("创建").setVersion("V1.0")
         );
+        config.setCustomResponseFields(
+                CustomRespField.field().setName("success").setDesc("成功返回true,失败返回false"),
+                CustomRespField.field().setName("message").setDesc("接口响应信息")
+        );
+
         long start = System.currentTimeMillis();
-        ApiDocBuilder.builderControllersApi(config);
-        //HtmlApiDocBuilder.builderControllersApi(config);
+        //ApiDocBuilder.builderControllersApi(config);
+        HtmlApiDocBuilder.builderControllersApi(config);
 
 
         //@since 1.7+版本开始，smart-doc支持生成带书签的html文档，html文档可选择下面额方式
