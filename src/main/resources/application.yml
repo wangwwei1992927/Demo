@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: demo
+
+
+pp:
+  id: 22
+  name: hanzi
+  list:
+    - id: 333
+      name: erzi1111
+    - id: 444
+      name: erzi222

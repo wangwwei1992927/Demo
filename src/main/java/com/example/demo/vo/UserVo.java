@@ -1,6 +1,9 @@
 package com.example.demo.vo;
 
 import lombok.Data;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+
+import java.util.List;
 
 /**
  * @description: 用户返回值
@@ -8,6 +11,7 @@ import lombok.Data;
  * @create: 2019-10-24 15:00
  */
 @Data
+@ConfigurationProperties(prefix = "pp")
 public class UserVo {
 
     /**
@@ -19,5 +23,7 @@ public class UserVo {
      * 姓名
      */
     private String name;
+
+    private List<UserVo> list;
 
 }

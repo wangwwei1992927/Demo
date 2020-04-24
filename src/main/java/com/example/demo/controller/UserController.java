@@ -11,27 +11,41 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.Resource;
 import java.util.HashMap;
 import java.util.Map;
 
 /**
  * 用户类
+ *
  * @author WangWei
- * @date 2019/9/23 15:49 
+ * @date 2019/9/23 15:49
  */
 @Slf4j
 @RestController
 @RequestMapping("/user")
 public class UserController {
 
+    @Resource
+    UserVo vo;
+
+
+    @PostConstruct
+    public void show() {
+        System.out.println("11111");
+        System.out.println("vo:" + vo.toString());
+    }
+
     /**
      * 获取学生信息
-     * @
+     *
      * @param name 姓名
      * @return
+     * @
      */
     @RequestMapping("/getStuInfo")
-    public StudentVo getStuInfo(String name){
+    public StudentVo getStuInfo(String name) {
         StudentVo vo = new StudentVo();
         vo.setName(name);
         vo.setSex(1);
@@ -46,7 +60,7 @@ public class UserController {
      * @return
      */
     @PostMapping("getInfo")
-    public UserVo getInfo(@RequestBody UserDto dto){
+    public UserVo getInfo(@RequestBody UserDto dto) {
         UserVo vo = new UserVo();
         vo.setId(dto.getId());
         vo.setName("娃娃");
