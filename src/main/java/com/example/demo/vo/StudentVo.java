@@ -33,5 +33,21 @@ public class StudentVo {
      */
     private List<UserVo> userVoList;
 
+    public void setJia(String a) {
+
+        this.sex = "男".equals(a) ? 1 : 0;
+    }
+
+    public String getJia() {
+        return this.sex == 1 ? "男" : "女";
+    }
+
+    /**
+     * 添加计算字段
+     */
+    public String getNumber() {
+        return "我是计算字段！";
+    }
+
 
 }

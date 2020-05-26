@@ -40,16 +40,14 @@ public class UserController {
     /**
      * 获取学生信息
      *
-     * @param name 姓名
+     * @param vo 姓名
      * @return
      * @
      */
     @RequestMapping("/getStuInfo")
-    public StudentVo getStuInfo(String name) {
-        StudentVo vo = new StudentVo();
-        vo.setName(name);
-        vo.setSex(1);
-        vo.setHobby("打篮球");
+    public StudentVo getStuInfo(@RequestBody StudentVo vo) {
+        vo.setName(vo.getName());
+        vo.setHobby("打篮球" + vo.getJia());
         return vo;
     }
 
