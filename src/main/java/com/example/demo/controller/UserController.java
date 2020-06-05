@@ -1,8 +1,6 @@
 package com.example.demo.controller;
 
-import com.example.demo.annotation.Log;
 import com.example.demo.dto.UserDto;
-import com.example.demo.enums.OperationType;
 import com.example.demo.vo.StudentVo;
 import com.example.demo.vo.UserVo;
 import lombok.extern.slf4j.Slf4j;
@@ -13,8 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * 用户类
@@ -33,8 +29,7 @@ public class UserController {
 
     @PostConstruct
     public void show() {
-        System.out.println("11111");
-        System.out.println("vo:" + vo.toString());
+        System.out.println("@PostConstruct初始化数据-- vo:" + vo.toString());
     }
 
     /**
